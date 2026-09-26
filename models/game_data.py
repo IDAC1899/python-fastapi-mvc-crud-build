@@ -1,7 +1,4 @@
-from fastapi import APIRouter, FastAPI
-
-app = FastAPI()
-router = APIRouter()
+# game_data.py
 
 games_db = {
     "games": [
@@ -10,10 +7,3 @@ games_db = {
         {"id": 3, "name": "fortnite", "in_stock": False, "rating": 4.4},
     ]
 }
-
-@router.get("/games")
-def get_games():
-    return games_db
-
-
-app.include_router(router)
